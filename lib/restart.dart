@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:feedback_app/variables.dart';
 import 'package:get/get.dart';
@@ -67,22 +65,25 @@ class _RestartState extends State<Restart> {
               ),
             ),
             SizedBox(height: 30),
-            InkWell(
-              onTap: () {
-                Get.back();
-                _v.currentSliderValue = 1;
-                _v.pts = 0;
-                _v.index = 0;
-              },
-              child: Container(
-                padding: EdgeInsets.all(12.0),
-                child: Text(
-                  'Restart',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'PTSans',
-                    color: Colors.blue,
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {
+                  Get.back();
+                  _v.currentSliderValue = 1;
+                  _v.pts = 0;
+                  _v.index = 0;
+                },
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  child: Text(
+                    'Restart',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'PTSans',
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
               ),
